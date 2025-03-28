@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flappy Bird Retro</title>
+  <link rel="icon" type="image/png" href="assets/yellowbird-downflap.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<button id="mobileJumpBtn">⬆️ Saltar</button>
+<body>
+  <div id="score">0</div>
+  <div id="startMenu">
+    <h2>¡Bienvenido a Flappy Bird!</h2>
+  
+    <div class="lang-container">
+      <span>Idioma:</span>
+      <select id="langSelector">
+        <option value="es">Español</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+    
+    <div class="preview-container">
+      <span>Escoge tu pájaro:</span>
+      <div id="birdPreview"></div>
+      <select id="birdSkin">
+        <option value="yellow">Amarillo</option>
+        <option value="blue">Azul</option>
+        <option value="red">Rojo</option>
+      </select>
+    </div>
+    
+    <div class="bg-container">
+      <span>Fondo:</span>
+      <select id="bgSelector">
+        <option value="bg">Día</option>
+        <option value="bg-night">Noche</option>
+        <option value="bg-clouds">Nubes</option>
+      </select>
+    </div>
+    
+    <div class="difficulty-container">
+      <span>Dificultad:</span>
+      <select id="difficultySelector">
+        <option value="easy">Fácil</option>
+        <option value="normal" selected>Normal</option>
+        <option value="hard">Difícil</option>
+        <option value="impossible">Imposible 💀</option>
+      </select>
+    </div>
+    
+    <div class="volume-container">
+      <span>Volumen:</span>
+      <input type="range" id="volumeSlider" min="0" max="1" step="0.05" value="1">
+      <button id="muteBtn">🔊</button>
+    </div>
+  
+    <button id="startBtn">¡Jugar!</button>
+  </div>
+  <canvas id="gameCanvas" width="400" height="600"></canvas>
+  <div id="gameOverScreen">
+    <div class="gameOverContent">
+      <h1>Game Over</h1>
+      <p>Puntuación: <span id="finalScore">0</span></p>
+      <button id="restartBtn">Reiniciar</button>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

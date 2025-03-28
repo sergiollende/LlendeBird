@@ -1,0 +1,20 @@
+{
+    "welcome": "¡Bienvenido a Flappy Bird!",
+    "language": "Idioma:",
+    "choose_bird": "Escoge tu pájaro:",
+    "background": "Fondo:",
+    "difficulty": "Dificultad:",
+    "volume": "Volumen:",
+    "play": "¡Jugar!",
+    "easy": "Fácil",
+    "normal": "Normal",
+    "hard": "Difícil",
+    "impossible": "Imposible 💀",
+    "day": "Día",
+    "night": "Noche",
+    "clouds": "Nubes",
+    "score": "Puntuación",
+    "restart": "Reiniciar",
+    "game_over": "Game Over"
+  }
+  
