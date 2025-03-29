@@ -244,6 +244,8 @@ input[type="range"] {
   border-radius: 10px;
   cursor: pointer;
   transition: background 0.3s ease;
+  margin: 10px;
+
 }
 
 .gameOverContent button:hover {
@@ -281,4 +283,44 @@ input[type="range"] {
 }
 #mobileJumpBtn:active {
   transform: scale(0.95);
+}
+
+/* Power Up Bar */
+.powerup-bars-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 10;
+}
+
+.powerup-bar {
+  display: flex;
+  align-items: center;
+  width: 160px;
+  height: 18px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  overflow: hidden;
+  padding: 2px 4px;
+}
+
+.powerup-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+  image-rendering: pixelated;
+}
+
+.powerup-fill {
+  height: 100%;
+  background: linear-gradient(to right, #f55454, #00aaff);
+  border-radius: 4px;
+  transition: width 0.05s linear;
+  flex-shrink: 0;
+  flex-grow: 0;
+  width: 100%;
 }

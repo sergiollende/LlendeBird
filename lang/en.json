@@ -1,11 +1,14 @@
 {
-    "welcome": "Welcome to Flappy Bird!",
+    "welcome": "Welcome to super Flappy Bird!",
     "language": "Language:",
     "choose_bird": "Choose your bird:",
     "background": "Background:",
     "difficulty": "Difficulty:",
     "volume": "Volume:",
     "play": "Play!",
+    "red": "Red",
+    "yellow": "Yellow",
+    "blue": "Blue",
     "easy": "Easy",
     "normal": "Normal",
     "hard": "Hard",
@@ -15,6 +18,7 @@
     "clouds": "Clouds",
     "score": "Score",
     "restart": "Restart",
+    "return_menu": "Return to menu",
     "game_over": "Game Over"
   }
   
