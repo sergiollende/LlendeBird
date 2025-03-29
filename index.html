@@ -61,8 +61,17 @@
     </div>
 
     <button id="startBtn">¡Jugar!</button>
+    <button id="instructionsBtn">📘 Instrucciones</button>
   </div>
 
+  <div id="instructionsModal" class="modal hidden">
+    <div class="modal-content">
+      <h2 id="instructionsTitle">Instrucciones</h2>
+      <div id="instructionsText"></div> <!-- solo contenido -->
+      <button id="closeInstructionsBtn">❌ Cerrar</button> <!-- fuera del innerHTML -->
+    </div>
+  </div>
+  
   <canvas id="gameCanvas" width="400" height="600"></canvas>
 
   <div id="gameOverScreen">

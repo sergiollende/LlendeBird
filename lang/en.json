@@ -19,6 +19,8 @@
     "score": "Score",
     "restart": "Restart",
     "return_menu": "Return to menu",
-    "game_over": "Game Over"
+    "game_over": "Game Over",
+    "instructions": "Instructions",
+    "instructions_text": "<p>Press <b>Space</b> or tap the screen to fly.<br>Avoid pipes, collect power-ups, and survive as long as you can.</p><h3>Power-Ups</h3><table><tr><th>Icon</th><th>Name</th><th>Effect</th></tr><tr><td><img src='assets/shield.png' width='24'></td><td>Shield</td><td>Blocks one hit</td></tr><tr><td><img src='assets/slow.png' width='24'></td><td>Slow</td><td>Reduces pipe speed</td></tr><tr><td><img src='assets/gap.png' width='24'></td><td>Extra Gap</td><td>Increases pipe gap</td></tr><tr><td><img src='assets/bomb.png' width='24'></td><td>Bomb</td><td>Clears pipes ahead</td></tr></table><p>Good luck! 🐤🔥</p>"
   }
   

@@ -1,4 +1,6 @@
 import { canvas, ctx } from './main.js';
+import { hasBirdShield, isBirdRecovering } from './bird.js';
+import {getBirdSkin} from './ui.js';
 
 // 🎵 Sonidos
 export const flapSound = new Audio('/assets/flap.wav');
@@ -48,3 +50,13 @@ export function resizeCanvas() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 }
+
+export function getTrailColor() {
+  switch (getBirdSkin()) {
+    case 'yellow': return 'gold';
+    case 'blue': return '#4da6ff';
+    case 'red': return '#ff4d4d';
+    default: return 'gold';
+  }
+}
+

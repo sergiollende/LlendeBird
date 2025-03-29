@@ -19,6 +19,8 @@
     "score": "Puntuación",
     "restart": "Reiniciar",
     "return_menu": "Volver al menú",
-    "game_over": "Game Over"
+    "game_over": "Game Over",
+    "instructions": "Instrucciones",
+    "instructions_text": "<p>Pulsa <b>Espacio</b> o toca la pantalla para volar.<br>Evita los tubos, recoge power-ups y llega lo más lejos posible.</p><h3>Power-Ups</h3><table><tr><th>Icono</th><th>Nombre</th><th>Efecto</th></tr><tr><td><img src='assets/shield.png' width='24'></td><td>Escudo</td><td>Bloquea un golpe</td></tr><tr><td><img src='assets/slow.png' width='24'></td><td>Ralentizar</td><td>Reduce la velocidad</td></tr><tr><td><img src='assets/gap.png' width='24'></td><td>Espacio Extra</td><td>Aumenta el hueco entre tubos</td></tr><tr><td><img src='assets/bomb.png' width='24'></td><td>Bomba</td><td>Elimina tubos por delante</td></tr></table><p>¡Buena suerte! 🐤🔥</p>"
   }
   

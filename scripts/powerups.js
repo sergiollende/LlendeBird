@@ -1,5 +1,6 @@
-import { getPipeSpeed, setPipeSpeed, activateGapBonus } from './pipes.js';
-import { grantShield } from './bird.js';
+import { getPipeSpeed, setPipeSpeed, activateGapBonus, pipes } from './pipes.js';
+import { grantShield , bird} from './bird.js';
+import { createExplosion } from './particles.js';
 
 export const powerUps = [];
 let powerUpActive = null;
@@ -8,7 +9,7 @@ const activePowerUps = {};
 
 export function maybeSpawnPowerUp(x, y) {
   if (Math.random() < powerUpSpawnRate / 100) {
-    const types = ['shield', 'slow', 'gap'];
+    const types = ['shield', 'slow', 'gap', 'bomb'];
     const type = types[Math.floor(Math.random() * types.length)];
     powerUps.push(new PowerUp(x, y, type));
   }
@@ -43,6 +44,11 @@ export function checkPowerUpCollision(bird) {
 
 export function activatePowerUp(type, bird) {
   switch (type) {
+    case 'bomb':
+      activateBomb();
+      showPowerUpBar('bomb', 60); // dura poco, es instantánea
+      break;
+
     case 'shield':
       grantShield();
       showPowerUpBar('shield', 180);
@@ -65,6 +71,21 @@ export function activatePowerUp(type, bird) {
       showPowerUpBar('gap', 300);
       break;
   }
+}
+
+function activateBomb() {
+  for (let i = pipes.length - 1; i >= 0; i--) {
+    const pipe = pipes[i];
+    if (pipe.x > bird.x) {
+      pipes.splice(i, 1); // 💥 boom!
+      createExplosion(pipe.x, pipe.top + 50);
+      createExplosion(pipe.x, pipe.bottom - 50);
+    }
+  }
+
+  // Sonido (si tienes uno)
+  const boomSound = new Audio('/assets/boom.wav');
+  boomSound.play();
 }
 
 export function showPowerUpBar(type, durationFrames) {

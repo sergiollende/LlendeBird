@@ -18,6 +18,13 @@ const gameOverScreen = document.getElementById('gameOverScreen');
 const gameOverContent = document.querySelector('.gameOverContent');
 const birdPreview = document.getElementById('birdPreview');
 const backToMenuBtn = document.getElementById('backToMenuBtn');
+const instructionsBtn = document.getElementById('instructionsBtn');
+const instructionsModal = document.getElementById('instructionsModal');
+const closeInstructionsBtn = document.getElementById('closeInstructionsBtn');
+
+export function getBirdSkin() {
+  return localStorage.getItem('skin') || 'yellow';
+}
 
 export function setUIListeners() {
   startBtn.addEventListener('click', () => {
@@ -69,6 +76,14 @@ export function setUIListeners() {
       canvas.classList.add('fade-in');
       setTimeout(() => canvas.classList.remove('fade-in'), 500);
     }, 500);
+  });
+
+  instructionsBtn.addEventListener('click', () => {
+    instructionsModal.classList.remove('hidden');
+  });
+  
+  closeInstructionsBtn.addEventListener('click', () => {
+    instructionsModal.classList.add('hidden');
   });
 
   langSelector.addEventListener('change', (e) => {
@@ -168,6 +183,11 @@ async function loadLanguage(langCode) {
     bgOptions[0].textContent = langData.day;
     bgOptions[1].textContent = langData.night;
     bgOptions[2].textContent = langData.clouds;
+
+    document.getElementById('instructionsTitle').textContent = langData.instructions;
+    document.getElementById('instructionsText').innerHTML = langData.instructions_text;
+    document.getElementById('instructionsBtn').textContent = `📘 ${langData.instructions}`;
+
   } catch (err) {
     console.error("Error cargando idioma:", err);
   }

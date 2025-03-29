@@ -3,8 +3,9 @@ import { bird, flapBird, initBird, updateBird, drawBird, resetBird } from './bir
 import { updatePipes, drawPipes, createPipe, resetPipes } from './pipes.js';
 import { updatePowerUps, drawPowerUps, checkPowerUpCollision, resetPowerUps, updatePowerUpBars } from './powerups.js';
 import { updateParticles, drawParticles, resetParticles } from './particles.js';
-import { drawBackground, autoSetBackground, resizeCanvas } from './utils.js';
+import { drawBackground, autoSetBackground, resizeCanvas, getTrailColor } from './utils.js';
 import { setUIListeners, applySavedSettings, hideStartMenu, showGameOverScreen, updateScoreDisplay } from './ui.js';
+import { TrailParticle, particles } from './particles.js';
 
 export const canvas = document.getElementById('gameCanvas');
 export const ctx = canvas.getContext('2d');
@@ -48,6 +49,8 @@ function gameLoop() {
   drawBackground(ctx);
 
   updateBird();
+  const trailColor = getTrailColor(); 
+  particles.push(new TrailParticle(bird.x + bird.width / 2, bird.y + bird.height / 2, trailColor));
   drawBird(ctx);
 
   updatePipes();

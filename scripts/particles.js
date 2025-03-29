@@ -1,4 +1,3 @@
-import { ctx } from './main.js';
 import { currentSkinColor } from './bird.js';
 
 export const particles = [];
@@ -24,6 +23,14 @@ export function drawParticles(ctx) {
 
 export function resetParticles() {
   particles.length = 0;
+}
+
+
+export function createExplosion(x, y) {
+  for (let i = 0; i < 20; i++) {
+    const p = new Particle(x, y); 
+    particles.push(p);
+  }
 }
 
 class Particle {
@@ -56,6 +63,37 @@ class Particle {
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
     ctx.fillStyle = this.color;
     ctx.fill();
+  }
+
+  isAlive() {
+    return this.life > 0;
+  }
+}
+
+export class TrailParticle {
+  constructor(x, y, color) {
+    this.x = x;
+    this.y = y;
+    this.radius = Math.random() * 2 + 1;
+    this.vx = -1.5 + Math.random(); // leve hacia atrás
+    this.vy = (Math.random() - 0.5) * 0.5;
+    this.color = color;
+    this.life = 30;
+  }
+
+  update() {
+    this.x += this.vx;
+    this.y += this.vy;
+    this.life--;
+  }
+
+  draw(ctx) {
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+    ctx.fillStyle = this.color;
+    ctx.globalAlpha = this.life / 30;
+    ctx.fill();
+    ctx.globalAlpha = 1;
   }
 
   isAlive() {
