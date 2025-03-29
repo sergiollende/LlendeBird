@@ -40,19 +40,14 @@ Con **skins personalizables**, **power-ups**, **diferentes fondos y dificultades
 - Modularización con `import/export`
 
 ---
-## 📂 Estructura del proyecto
-
-├── index.html ├── style.css ├── scripts/ │ ├── main.js │ ├── bird.js │ ├── pipes.js │ ├── particles.js │ ├── powerups.js │ ├── ui.js │ └── utils.js ├── lang/ │ ├── es.json │ └── en.json ├── assets/ │ ├── sprites/ │ ├── sonidos/ │ └── powerups/
-
-yaml
-Copiar
-Editar
-
----
 
 ## 📦 Cómo usar
 
 1. Clona este repositorio:
+git clone https://github.com/sergiollende/LlendeBird.git
 
-```bash
-git clone https://github.com/tuusuario/flappy-bird-retro.git
+2. Abre el proyecto:
+cd flappy-bird-retro
+Abre index.html directamente en tu navegador
+o usa una extensión como Live Server para recarga automática.
+
