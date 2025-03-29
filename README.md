@@ -40,3 +40,19 @@ Con **skins personalizables**, **power-ups**, **diferentes fondos y dificultades
 - Modularización con `import/export`
 
 ---
+## 📂 Estructura del proyecto
+
+├── index.html ├── style.css ├── scripts/ │ ├── main.js │ ├── bird.js │ ├── pipes.js │ ├── particles.js │ ├── powerups.js │ ├── ui.js │ └── utils.js ├── lang/ │ ├── es.json │ └── en.json ├── assets/ │ ├── sprites/ │ ├── sonidos/ │ └── powerups/
+
+yaml
+Copiar
+Editar
+
+---
+
+## 📦 Cómo usar
+
+1. Clona este repositorio:
+
+```bash
+git clone https://github.com/tuusuario/flappy-bird-retro.git
