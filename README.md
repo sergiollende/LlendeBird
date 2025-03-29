@@ -2,7 +2,7 @@
 
 Un remake retro del clásico Flappy Bird hecho con HTML, CSS y JavaScript.  
 Con **skins personalizables**, **power-ups**, **diferentes fondos y dificultades**, ¡y mucho más! 🎮
-
+Si quieres jugar, entra en: https://llendebird.netlify.app
 ---
 
 ## 🚀 Características
